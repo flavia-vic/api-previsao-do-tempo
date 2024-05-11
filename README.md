@@ -9,7 +9,7 @@ exibidos.
 - FrameWork Web: Flask 
 - API de Clima : OpenWeatherMap  
 ### Primeira página
-Na primeira página que entramos há um form com um campo de imput onde você insere o nome da cidade que você deseja buscar os dados meteorológicos.
+Na primeira página que entramos há um form com um campo de input onde você insere o nome da cidade que você deseja buscar os dados meteorológicos.
  ![formulario principal](/images/form.png)
 Caso o nome inserido não exista, é retornada uma mensagem para inserir uma palavra válida.
 
