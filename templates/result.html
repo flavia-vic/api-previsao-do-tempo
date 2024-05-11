@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/con.js') }}">
+
+
+
+
+<body class="{{ weather_data.description|lower }}"> 
+    <div id="card" class="blur-background">
+
+        <div class="card-conteudo text-white">
+            
+            <h2>Resultado para {{ city }}:</h2>
+            <p class="card-text" style="display: flex; align-items: center;">
+                <i class="bi bi-thermometer-half" style="margin-right: 15px;" ></i>
+                Temperatura: {{ weather_data.temperature }} &#8451;
+            </p>
+
+            <p class="card-text" style="display: flex; align-items: center;">
+                <i class="bi bi-cloud" style="margin-right: 15px;"></i>
+                Descrição: {{ weather_data.description }}
+            </p>
+
+            <p class="card-text" style="display: flex; align-items: center;">
+                <i class="bi bi-wind" style="margin-right: 15px;"></i>
+                Velocidade do Vento: {{ weather_data.wind_speed }} km/h
+            </p>
+
+            <p class="card-text" style="display: flex; align-items: center;">
+                <i class="bi bi-thermometer-high" style="margin-right: 15px;"></i>
+                Temperatura Máxima: {{ weather_data.temp_max }} &#8451;
+            </p>
+            <p class="card-text" style="display: flex; align-items: center;">
+                <i class="bi bi-thermometer"style="margin-right: 15px;"></i>
+                Temperatura Mínima: {{ weather_data.temp_min }} &#8451;
+            </p>
+            
+        
+            <p class="card-text" style="display: flex; align-items: center;">
+                <i class="bi bi-sunrise" style="margin-right: 15px;"></i>
+                Nascer Do Sol: {{ weather_data['sunrise_hours'] }} 
+            </p>
+            <p>
+                <i class="bi bi-sunset"style="margin-right: 15px;"></i>
+                Pôr Do Sol: {{ weather_data['sunset_hours'] }}
+
+            </p>
+            <p class="card-text" style="display: flex; align-items: center;">
+                <i class="bi bi-flag"style="margin-right: 15px;"></i>
+                País: {{ weather_data.country }}
+                <br>
+            </p>
+            <p>
+                <i class="bi bi-compass"style="margin-right: 15px;"></i>
+                A cidade de {{ city }} se encontra nas seguintes coordenadas:
+                <li>
+                    {{ weather_data['lon'] }}
+                </li>
+                <li>
+                    {{ weather_data['lat'] }}
+                </li>
+            </p>
+            
+            
+            
+        </div>
+        
+    </div>
+
+
+
+</body>
+</html>

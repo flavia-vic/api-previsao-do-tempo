@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('/static/images/download.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#card {
+    width: 350px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+
+  }
+
+  .blur-background {
+    backdrop-filter: blur(5px);
+}
+.text-white{
+  color:black
+}
+
+h1{
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid silver;
+  }
+
+form {
+    display: flex;
+    flex-direction: column;
+  }
+
+label {
+    margin-bottom: 8px;
+  }
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+
+button {
+    padding: 10px;
+    background-color: rgb(24, 169, 241);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+h2{
+    text-align: center;
+}
+
