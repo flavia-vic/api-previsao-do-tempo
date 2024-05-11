@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 app = Flask(__name__,  static_folder='static', template_folder='templates')
-app.config['SECRET_KEY'] = 'db4c1a2efa5032836aeb931226ceacae'  
+app.config['SECRET_KEY'] = 'SUA_CHAVE_SECRETA_PARA_FORMS'  
 
 class WeatherForm(FlaskForm):
     city = StringField('Cidade')
@@ -41,7 +41,7 @@ def index():
 
 
 def get_weather_data(city):
-    api_key = 'db4c1a2efa5032836aeb931226ceacae'  
+    api_key = 'SUA_CHAVE_API_AQUI'  
     base_url = 'https://api.openweathermap.org/data/2.5/weather?'
     params = {'q': city, 'appid': api_key, 'lang':'pt_br', 'units':'metric'}
 
