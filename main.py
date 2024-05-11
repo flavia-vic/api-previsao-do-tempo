@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request, flash
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from flask import send_from_directory
-import requests
+from flask import Flask, render_template, request, flash  # type: ignore
+from flask_wtf import FlaskForm # type: ignore
+from wtforms import StringField, SubmitField # type: ignore
+from flask import send_from_directory # type: ignore
+import requests # type: ignore
 import datetime
 from datetime import datetime
 
